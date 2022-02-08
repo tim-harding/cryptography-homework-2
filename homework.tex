@@ -45,7 +45,7 @@ for g in range(2, p):
 print(count)
 \end{verbatim}
 
-Below are the primitive roots I found, of which there are indeed $\phi(228) = 72$ of them.
+Below are the primitive roots I found, of which there are indeed $\phi(228) = 72$.
 
 \begin{align*}
     &6 & &7 & &10 & &23 & &24 & &28 & &29 & &31 & &35 & &38 & &39 & &40 \\
@@ -58,6 +58,30 @@ Below are the primitive roots I found, of which there are indeed $\phi(228) = 72
 
 \subsection*{f}
 \textit{Problem:} Find all primes less than 100 for which 2 is a primitive root.
+
+\textit{Solution:} Below is the Python program I wrote to find the solution:
+\begin{verbatim}
+primes_under_100 = [
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
+    43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,
+]
+for p in primes_under_100:
+    power = 2
+    has_primitive_root_2 = True
+    for i in range(0, p - 2):
+        if power == 1:
+            has_primitive_root_2 = False
+            break
+        power = (power * 2) % p
+    if has_primitive_root_2:
+        print(p)
+\end{verbatim}
+
+I found the following list of primes fitting the criterion:
+\begin{align*}
+&2 & &3 & &5 & &11 & &13 & &19 & &29 \\
+&37 & &53 & &59 & &61 & &67 & &83
+\end{align*}
 
 \section*{1.43}
 Given
