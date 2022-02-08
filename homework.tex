@@ -153,4 +153,26 @@ Given
 
 \textit{Solution:} TODO. Ditto.
 
+\section*{2.6}
+Given
+\begin{align*}
+    p &= 1373 \\
+    g &= 2 \\
+    g^a &= 974 \\
+    b &= 871
+\end{align*}
+\textit{Problem:} Find $g^b$ and the shared key $g^{ab}$.
+
+\textit{Solution:}
+\begin{align*}
+    g^b &= 2^{871} \pmod{1373} \\
+    &\equiv \boxed{805} \\
+    \\
+    g^{ab} &= (g^a)^b \pmod{1373} \\
+    &= 974^{871} \pmod{1373} \\
+    &\equiv \boxed{397}
+\end{align*}
+
+\section*{2.8}
+
 \end{document}
