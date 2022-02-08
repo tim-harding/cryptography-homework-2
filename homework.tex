@@ -43,6 +43,25 @@ Given
     d(431) &= 336 \times (431 - 71) \pmod{541} \\
     &\equiv \boxed{317}
 \end{align*}
+
 \subsection*{c}
+\textit{Problem:} Given $p = 601$, $c_1 = 324$, $c_2 = 381$, $m_1 = 387$, and $m_2 = 491$, find the key and encrypt $m_3 = 173$.
+
+\textit{Solution:}
+\begin{align*}
+    324 &\equiv 387 k_1 + k_2 \pmod{601} & 381 &\equiv 491 k_1 + k_2 \pmod{601} \\
+    k_2 &\equiv 324 - 387k_1 \pmod{601} & k_2 &\equiv 381 - 491 k_2
+\end{align*}
+\begin{align*}
+    324 - 387 k_1 &\equiv 381 - 491 k_1 \pmod{601} \\
+    324 - 381 &\equiv 387 k_1 - 491 k_1 \pmod{601} \\
+    k_1 &\equiv (324 - 381) \times (387 - 491)^{-1} \pmod{601} \\
+    (387 - 491)^{-1} &\equiv 497 \pmod{601} \\
+    k_1 &\equiv 519 \\
+    k_2 &\equiv 324 - 387 \times 519 \pmod{601} \\
+    k_2 &\equiv 205 \\
+    c_3 &= e(173) = 519 \times 173 + 205 \pmod{601} \\
+    c_3 &= \boxed{443}
+\end{align*}
 
 \end{document}
