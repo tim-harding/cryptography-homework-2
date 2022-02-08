@@ -15,15 +15,34 @@
 \newcommand{\curly}[1]{\left\{ #1 \right\}}
 \newcommand{\round}[1]{\left( #1 \right)}
 \newcommand{\hard}[1]{\left[ #1 \right]}
-\newcommand{\C}[2]{
-    \begin{pmatrix}
-        #1 \\ #2
-    \end{pmatrix}
-}
-\newcommand{\iif}{\Longleftrightarrow}
 
-\title{Formal Languages and Functional Programming Notes}
+\title{Cryptography Homework 2}
 \author{Tim Harding}
 
 \begin{document}
+\maketitle
+
+\section*{1.34}
+\subsection*{e}
+\subsection*{f}
+
+\section*{1.43}
+Given
+\begin{align*}
+    e_k(m) &\equiv k_1 m + k_2 \pmod{p} \\
+    d_k(c) &\equiv k_1^{-1} (c - k_2)
+\end{align*}
+\subsection*{a}
+\textit{Problem:} Given $p = 541$, $k_1 = 34$, and $k_2 = 71$, encrypt $m = 204$ and decrypt $c = 431$.
+\textit{Solution:}
+\begin{align*}
+    e(204) &= 34 \times 204 + 71 \pmod{541} \\
+    &\equiv \boxed{515} \\
+    \\
+    34^{-1} \pmod{541} &\equiv 366 \\
+    d(431) &= 336 \times (431 - 71) \pmod{541} \\
+    &\equiv \boxed{317}
+\end{align*}
+\subsection*{c}
+
 \end{document}
