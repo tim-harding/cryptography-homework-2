@@ -75,5 +75,12 @@ Given
 \end{align*}
 
 \subsection*{b}
+\textit{Problem:} Find $B$ such that it will take 100 years at 365.25 days per year to brute-force half the keys in a space of $2^B$ at a rate of $10^{10}$ keys per second.
+\textit{Solution:}
+\begin{align*}
+    \frac{2^{B-1}}{10^{10} \times 60 \times 60 \times 24 \times 325.25} &= 100 \\
+    B &= \log_2(10^{12} \times 60^2 \times 24 \times 325.25) + 1 \\
+    B &\approx \boxed{65.6}
+\end{align*}
 
 \end{document}
