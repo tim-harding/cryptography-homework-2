@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 
+\usepackage{siunitx}
 \usepackage{fouriernc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -63,5 +64,16 @@ Given
     c_3 &= e(173) = 519 \times 173 + 205 \pmod{601} \\
     c_3 &= \boxed{443}
 \end{align*}
+
+\section*{1.47}
+\subsection*{a}
+\textit{Problem:} How many does does it take to brute-force check $\frac{2^{56}}{2}$ keys at $10,000,000,000$ keys per second?
+\textit{Solution:}
+\begin{align*}
+    \frac{2^{55}}{10^{10}} &\approx 3.6 \times 10^6 \text{s} \\
+    3.6 \times 10^6 \text{ s} \times \frac{1}{60} \frac{\text{m}}{\text{s}} \times \frac{1}{60} \frac{\text{h}}{\text{m}} \times \frac{1}{24} \frac{\text{d}}{\text{h}} &\approx \boxed{41.7} \text{ days}
+\end{align*}
+
+\subsection*{b}
 
 \end{document}
