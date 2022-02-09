@@ -229,4 +229,13 @@ Alice sends $\boxed{(719, 623)}$.
 \subsection*{d}
 \textit{Problem:} Given $B = 893$, $c_1 = 693$, and $c_2 = 793$, find $b$ and decrypt the message.
 
+\textit{Solution:} Using the program I wrote for problem 2.4, I found that $b = 219$, which can be confirmed by $2^219 \equiv 893 \pmod{1373}$. To decrypt the message, we have
+\begin{align*}
+    m &= c_2 (c_1^b)^{-1} \\
+    &= 793 \times (693^219)^{-1} \pmod{1373} \\
+    &\equiv 793 \times 431^{-1} \pmod{1373} \\
+    &\equiv 793 \times 532 \pmod{1373} \\
+    &\equiv \boxed{365} \pmod{1373}
+\end{align*}
+
 \end{document}
