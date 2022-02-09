@@ -190,7 +190,19 @@ Given
 \end{align*}
 
 \subsection*{b}
-\textit{Problem:}
+\textit{Problem:} Given $b = 716$, $B \equiv 2^{716} \equiv 469 \pmod{1373}$, $m = 583$, and $k = 877$, find $(c_1, c_2)$ that Alice sends.
+
+\textit{Solution:}
+\begin{align*}
+    c_1 &= g^k \\
+    &= 2^{877} \pmod{1373} \\
+    &\equiv 719 \pmod{1373} \\
+    \\
+    c_2 &= m \times B^k \\
+    &= 583 \times (2^{716})^{877} \pmod{1373} \\
+    &\equiv 623
+\end{align*}
+Alice sends $\boxed{(719, 623)}$.
 
 \subsection*{c}
 \textit{Problem:}
