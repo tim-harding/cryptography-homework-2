@@ -146,7 +146,17 @@ Given
 \subsection*{a}
 \textit{Problem:} Solve for $x$ in $2^x \equiv 13 \pmod{23}$.
 
-\textit{Solution:} TODO. I understand we will be looking at an algorithm for the discrete log problem. Come back to this.
+\textit{Solution:}
+I wrote the following code to brute-force the solution:
+\begin{verbatim}
+current = 1
+for i in range(0, modulus):
+    if current == argument:
+        print(i)
+        return
+    current = (current * base) % modulus
+\end{verbatim}
+I found a value of 7, which can be confirmed with $2^7 \equiv 13 \pmod{23}$.
 
 \subsection*{b}
 \textit{Problem:} Solve for $x$ in $10^x \equiv 22 \pmod{47}$.
