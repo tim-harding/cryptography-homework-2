@@ -205,7 +205,16 @@ Given
 Alice sends $\boxed{(719, 623)}$.
 
 \subsection*{c}
-\textit{Problem:}
+\textit{Problem:} Given $a = 2^299 \equiv 34 \pmod{1373}$, $c_1 = 661$, and $c_2 = 1325$, decrypt Bob's message.
+
+\textit{Solution:}
+\begin{align*}
+    m &= c_2 (c_1^a)^{-1} \\
+    &= 1325 \times (661^{34})^{-1} \pmod{1373} \\
+    &\equiv 1325 \times 190^{-1} \pmod{1373} \\
+    &\equiv 1325 \times 383 \pmod{1373} \\
+    &\equiv \boxed{838} \pmod{1373}
+\end{align*}
 
 \subsection*{d}
 \textit{Problem:}
