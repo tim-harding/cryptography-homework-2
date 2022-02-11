@@ -8,7 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{multicol}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=1in]{geometry}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -45,6 +45,7 @@ for g in range(2, p):
 print(count)
 \end{verbatim}
 
+\pagebreak
 Below are the primitive roots I found, of which there are indeed $\phi(228) = 72$.
 
 \begin{align*}
@@ -108,16 +109,16 @@ Given
 \textit{Solution:}
 \begin{align*}
     324 &\equiv 387 k_1 + k_2 \pmod{601} & 381 &\equiv 491 k_1 + k_2 \pmod{601} \\
-    k_2 &\equiv 324 - 387k_1 \pmod{601} & k_2 &\equiv 381 - 491 k_2
+    k_2 &\equiv 324 - 387k_1 \pmod{601} & k_2 &\equiv 381 - 491 k_2 \pmod{601}
 \end{align*}
 \begin{align*}
     324 - 387 k_1 &\equiv 381 - 491 k_1 \pmod{601} \\
     324 - 381 &\equiv 387 k_1 - 491 k_1 \pmod{601} \\
     k_1 &\equiv (324 - 381) \times (387 - 491)^{-1} \pmod{601} \\
     (387 - 491)^{-1} &\equiv 497 \pmod{601} \\
-    k_1 &\equiv 519 \\
+    k_1 &\equiv 519 \pmod{601} \\
     k_2 &\equiv 324 - 387 \times 519 \pmod{601} \\
-    k_2 &\equiv 205 \\
+    k_2 &\equiv 205 \pmod{601} \\
     c_3 &= e(173) = 519 \times 173 + 205 \pmod{601} \\
     c_3 &= \boxed{443}
 \end{align*}
@@ -179,7 +180,7 @@ Given
     &\equiv \boxed{805} \\
     \\
     g^{ab} &= (g^a)^b \pmod{1373} \\
-    &= 974^{871} \pmod{1373} \\
+    &\equiv 974^{871} \pmod{1373} \\
     &\equiv \boxed{397}
 \end{align*}
 
